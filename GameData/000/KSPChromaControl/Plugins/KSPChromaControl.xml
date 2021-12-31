@@ -443,87 +443,54 @@
             </summary>
         </member>
         <member name="T:KspChromaControl.SceneManagers.FlightSceneManager">
-            <summary>
-                Manages the keyboard colors during all flight scenes.
-            </summary>
+            <summary>Manages the keyboard colors during all flight scenes.</summary>
         </member>
         <member name="F:KspChromaControl.SceneManagers.FlightSceneManager.actionGroups">
-            <summary>
-                Contains all ActionGroups and their current usage state. False means
-                this ActionGroup has no impact on any part of the vessel.
-            </summary>
+            <summary>Contains all ActionGroups and their current usage state. False means
+            this ActionGroup has no impact on any part of the vessel.</summary>
         </member>
         <member name="F:KspChromaControl.SceneManagers.FlightSceneManager.currentColorScheme">
-            <summary>
-                The current keyboard state color scheme
-            </summary>
+            <summary>The current keyboard state color scheme</summary>
         </member>
         <member name="F:KspChromaControl.SceneManagers.FlightSceneManager.currentVessel">
-            <summary>
-                The vessel we are piloting currently. Can be a normal vessel or a single
-                kerbal.
-            </summary>
+            <summary> The vessel we are piloting currently. Can be a normal vessel or a single kerbal.</summary>
         </member>
         <member name="F:KspChromaControl.SceneManagers.FlightSceneManager.maxTemperature">
-            <summary>
-                Maximum relative temperature, meaning the maximum of the percentage of all parts heat / heat resistance
-            </summary>
+            <summary>Maximum relative temperature, meaning the maximum of the percentage of all parts heat / heat resistance </summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.#ctor">
-            <summary>
-                Fills the action group list with all false values;
-            </summary>
+            <summary>Fills the action group list with all false values;</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.GetScheme">
-            <summary>
-                Returns the calculated color scheme for the current game state.
-            </summary>
+            <summary>Returns the calculated color scheme for the current game state.</summary>
             <returns>The final color scheme for this frame</returns>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.ResetActionGroups">
-            <summary>
-                Recalculates every action group's usage.
-            </summary>
+            <summary>Recalculates every action group's usage.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.Update">
-            <summary>
-                Called by the plugin on every physics frame.
-            </summary>
+            <summary>Called by the plugin on every physics frame.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.FindUsableActionGroups">
-            <summary>
-                Scans the ship's parts for actions in any action group. Every action group
-                that has any active parts gets a toggleing button lit up.
-            </summary>
+            <summary>Scans the ship's parts for actions in any action group. Every action group that has any active parts gets a toggleing button lit up.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.RecalculateResources">
-            <summary>
-                Displays the fuel status as lights on the keyboard.
-            </summary>
+            <summary>Displays the fuel status as lights on the keyboard.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.ShowGauge(System.String,System.Double,System.Double)">
-            <summary>
-                Displays the amount of resources left as a gauge on the keyboard
-            </summary>
+            <summary>Displays the amount of resources left as a gauge on the keyboard</summary>
             <param name="resource">The name of the resource</param>
             <param name="amount">The actual amount of the resource in the current stage</param>
             <param name="maxAmount">The maximal amount of the resource in the current stage</param>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.UpdateToggleables">
-            <summary>
-                Updates all toggleable buttons on the keyboard.
-            </summary>
+            <summary>Updates all toggleable buttons on the keyboard.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.DisplayVesselHeight">
-            <summary>
-                Height off ground display on F keys from F1 to F4.
-            </summary>
+            <summary> Height off ground display on F keys from F1 to F4.</summary>
         </member>
         <member name="M:KspChromaControl.SceneManagers.FlightSceneManager.CalculateDistanceFromGroundAndTemperaturePercentage">
-            <summary>
-                Calculates the ground distance for the vessel. Also calculates the maximum temperature percentage
-                because why iterate over all parts twice.
-            </summary>
+            <summary>Calculates the ground distance for the vessel. Also calculates the maximum temperature percentage because why iterate over all parts twice.</summary>
             <returns></returns>
         </member>
         <member name="T:KspChromaControl.SceneManagers.ISceneManager">
