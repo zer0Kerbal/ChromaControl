@@ -22,10 +22,10 @@ namespace KspChromaControl
         /// <summary>
         ///     Three colors we use to display craft hotness.
         /// </summary>
-        private static Color cold = Color.Blue;
+        private static readonly Color cold = Color.Blue;
 
-        private static Color warm = Color.Red;
-        private static Color hot = Color.Yellow;
+        private static readonly Color warm = Color.Red;
+        private static readonly Color hot = Color.Yellow;
 
         /// <summary>
         ///     Unity Keybinding - UK Layout translation dictionary
@@ -187,8 +187,8 @@ namespace KspChromaControl
 
         private Static headSetGrid;
 
-        private CustomGrid mouseGrid = new CustomGrid(Color.Black);
-        private Custom mousePadGrid = new Custom(Color.Black);
+        private readonly CustomGrid mouseGrid = new CustomGrid(Color.Black);
+        private readonly Custom mousePadGrid = new Custom(Color.Black);
 
         /// <summary>
         ///     Applies the current color scheme to all connected razer devices.
