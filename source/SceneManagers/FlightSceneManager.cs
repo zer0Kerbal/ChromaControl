@@ -7,9 +7,7 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Manages the keyboard colors during all flight scenes.
-    /// </summary>
+    /// <summary>Manages the keyboard colors during all flight scenes.</summary>
     internal class FlightSceneManager : ISceneManager
     {
         private static readonly KeyCode[] rotation =
@@ -29,39 +27,26 @@
             GameSettings.TIME_WARP_STOP.primary.code
         };
 
-        /// <summary>
-        ///     Contains all ActionGroups and their current usage state. False means
-        ///     this ActionGroup has no impact on any part of the vessel.
-        /// </summary>
+        /// <summary>Contains all ActionGroups and their current usage state. False means
+        /// this ActionGroup has no impact on any part of the vessel.</summary>
         private readonly Dictionary<KSPActionGroup, bool> actionGroups = new Dictionary<KSPActionGroup, bool>();
 
-        /// <summary>
-        ///     The current keyboard state color scheme
-        /// </summary>
+        /// <summary>The current keyboard state color scheme</summary>
         private ColorScheme currentColorScheme;
 
-        /// <summary>
-        ///     The vessel we are piloting currently. Can be a normal vessel or a single
-        ///     kerbal.
-        /// </summary>
+        /// <summary> The vessel we are piloting currently. Can be a normal vessel or a single kerbal.</summary>
         private Vessel currentVessel;
 
-        /// <summary>
-        ///     Maximum relative temperature, meaning the maximum of the percentage of all parts heat / heat resistance
-        /// </summary>
+        /// <summary>Maximum relative temperature, meaning the maximum of the percentage of all parts heat / heat resistance </summary>
         private double maxTemperature;
 
-        /// <summary>
-        ///     Fills the action group list with all false values;
-        /// </summary>
+        /// <summary>Fills the action group list with all false values;</summary>
         public FlightSceneManager()
         {
             this.ResetActionGroups();
         }
 
-        /// <summary>
-        ///     Returns the calculated color scheme for the current game state.
-        /// </summary>
+        /// <summary>Returns the calculated color scheme for the current game state.</summary>
         /// <returns>The final color scheme for this frame</returns>
         public ColorScheme GetScheme()
         {
@@ -69,9 +54,7 @@
             return this.currentColorScheme;
         }
 
-        /// <summary>
-        ///     Recalculates every action group's usage.
-        /// </summary>
+        /// <summary>Recalculates every action group's usage.</summary>
         private void ResetActionGroups()
         {
             this.actionGroups.Clear();
@@ -85,9 +68,7 @@
             }
         }
 
-        /// <summary>
-        ///     Called by the plugin on every physics frame.
-        /// </summary>
+        /// <summary>Called by the plugin on every physics frame.</summary>
         private void Update()
         {
             if (this.currentVessel != FlightGlobals.ActiveVessel)
@@ -122,10 +103,7 @@
             }
         }
 
-        /// <summary>
-        ///     Scans the ship's parts for actions in any action group. Every action group
-        ///     that has any active parts gets a toggleing button lit up.
-        /// </summary>
+        /// <summary>Scans the ship's parts for actions in any action group. Every action group that has any active parts gets a toggleing button lit up.</summary>
         private void FindUsableActionGroups()
         {
             var allActionsList = new List<BaseAction>();
@@ -153,9 +131,7 @@
             this.actionGroups[KSPActionGroup.SAS] = true;
         }
 
-        /// <summary>
-        ///     Displays the fuel status as lights on the keyboard.
-        /// </summary>
+        /// <summary>Displays the fuel status as lights on the keyboard.</summary>
         private void RecalculateResources()
         {
             var resources = new Dictionary<string, KeyValuePair<double, double>>();
@@ -205,9 +181,7 @@
             }
         }
 
-        /// <summary>
-        ///     Displays the amount of resources left as a gauge on the keyboard
-        /// </summary>
+        /// <summary>Displays the amount of resources left as a gauge on the keyboard</summary>
         /// <param name="resource">The name of the resource</param>
         /// <param name="amount">The actual amount of the resource in the current stage</param>
         /// <param name="maxAmount">The maximal amount of the resource in the current stage</param>
@@ -290,9 +264,7 @@
             }
         }
 
-        /// <summary>
-        ///     Updates all toggleable buttons on the keyboard.
-        /// </summary>
+        /// <summary>Updates all toggleable buttons on the keyboard.</summary>
         private void UpdateToggleables()
         {
             // Updates all toggleable action group keys
@@ -388,9 +360,7 @@
             }
         }
 
-        /// <summary>
-        ///     Height off ground display on F keys from F1 to F4.
-        /// </summary>
+        /// <summary> Height off ground display on F keys from F1 to F4.</summary>
         private void DisplayVesselHeight()
         {
             double[] heightLimits =
@@ -430,10 +400,7 @@
             }
         }
 
-        /// <summary>
-        ///     Calculates the ground distance for the vessel. Also calculates the maximum temperature percentage
-        ///     because why iterate over all parts twice.
-        /// </summary>
+        /// <summary>Calculates the ground distance for the vessel. Also calculates the maximum temperature percentage because why iterate over all parts twice.</summary>
         /// <returns></returns>
         private double CalculateDistanceFromGroundAndTemperaturePercentage()
         {
