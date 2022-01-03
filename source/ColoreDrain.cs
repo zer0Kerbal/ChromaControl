@@ -7,6 +7,9 @@ namespace KspChromaControl
     using Corale.Colore.Core;
     using Corale.Colore.Razer.Keyboard;
     using Corale.Colore.Razer.Mouse.Effects;
+    using Corale.Colore.Razer.Headset.Effects;
+    using Corale.Colore.Razer.Keypad.Effects;
+    using Corale.Colore.Razer.Mousepad.Effects;
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
     using Color = Corale.Colore.Core.Color;
@@ -14,22 +17,15 @@ namespace KspChromaControl
     using Custom = Corale.Colore.Razer.Mousepad.Effects.Custom;
     using Static = Corale.Colore.Razer.Headset.Effects.Static;
 
-    /// <summary>
-    ///     Data drain that colors razer devices.
-    /// </summary>
+    /// <summary>Data drain that colors razer devices.</summary>
     internal class ColoreDrain : IDataDrain
     {
-        /// <summary>
-        ///     Three colors we use to display craft hotness.
-        /// </summary>
+        /// <summary>Three colors we use to display craft hotness.</summary>
         private static Color cold = Color.Blue;
-
         private static Color warm = Color.Red;
         private static Color hot = Color.Yellow;
 
-        /// <summary>
-        ///     Unity Keybinding - UK Layout translation dictionary
-        /// </summary>
+        /// <summary>Unity Keybinding - UK Layout translation dictionary</summary>
         private static Dictionary<KeyCode, Key> keyMapping = new Dictionary<KeyCode, Key>
         {
             {KeyCode.A, Key.A},
@@ -190,9 +186,10 @@ namespace KspChromaControl
         private CustomGrid mouseGrid = new CustomGrid(Color.Black);
         private Custom mousePadGrid = new Custom(Color.Black);
 
-        /// <summary>
-        ///     Applies the current color scheme to all connected razer devices.
-        /// </summary>
+        // private CustomGrid mousePadGrid = new Custom(Color.Black);
+        // private CustomGrid keypadGrid = new Custom(Color.Black);
+
+        /// <summary>Applies the current color scheme to all connected razer devices.</summary>
         /// <param name="scheme"></param>
         public void Send(ColorScheme scheme)
         {
@@ -218,9 +215,7 @@ namespace KspChromaControl
             }
         }
 
-        /// <summary>
-        ///     Applies the color scheme to the keyboard.
-        /// </summary>
+        /// <summary>Applies the color scheme to the keyboard.</summary>
         /// <param name="colorScheme">The color scheme to apply.</param>
         private static void ApplyToKeyboard(ColorScheme colorScheme)
         {
@@ -234,9 +229,7 @@ namespace KspChromaControl
             }
         }
 
-        /// <summary>
-        ///     Paints heat displays onto all connected devices except keyboards and keypads.
-        /// </summary>
+        /// <summary>Paints heat displays onto all connected devices except keyboards and keypads.</summary>
         /// <param name="colorScheme"></param>
         private void DisplayHeat(ColorScheme colorScheme)
         {
