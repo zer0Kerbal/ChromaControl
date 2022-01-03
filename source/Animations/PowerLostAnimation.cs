@@ -4,20 +4,14 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Displays a warning on the keyboard, indicating that the vessel is currently out of power and cannot
-    ///     be controlled. Consists of two frames alternating at 1fps.
-    /// </summary>
+    /// <summary>Displays a warning on the keyboard, indicating that the vessel is currently out of power and cannot be controlled. 
+    /// Consists of two frames alternating at 1fps.</summary>
     internal class PowerLostAnimation : KeyboardAnimation
     {
-        /// <summary>
-        ///     The red frame
-        /// </summary>
+        /// <summary>The red frame</summary>
         private static readonly ColorScheme red = new ColorScheme(Color.red);
 
-        /// <summary>
-        ///     The blue frame
-        /// </summary>
+        /// <summary>The blue frame</summary>
         private static readonly ColorScheme blue = new ColorScheme(Color.blue);
 
         private static readonly List<GameScenes> validScenes = new List<GameScenes>
@@ -25,9 +19,7 @@
             GameScenes.FLIGHT
         };
 
-        /// <summary>
-        ///     Static constructor adds lightning bolts in different colors to both frames
-        /// </summary>
+        /// <summary>Static constructor adds lightning bolts in different colors to both frames</summary>
         static PowerLostAnimation()
         {
             KeyCode[] lightningKeys =
@@ -45,23 +37,17 @@
             red.SetKeysToColor(lightningKeys, Color.blue);
         }
 
-        /// <summary>
-        ///     Constructor that initializes the keyboard animation object. frames can be null here, because the
-        ///     getFrame method relies on alternating between two fixed frames rather than a sequence.
-        /// </summary>
+        /// <summary>Constructor that initializes the keyboard animation object. frames can be null here, because the
+        /// getFrame method relies on alternating between two fixed frames rather than a sequence.</summary>
         public PowerLostAnimation() : base(1, validScenes, null)
         {
         }
 
-        /// <summary>
-        ///     <see cref="KeyboardAnimation.GetFrame" />
-        /// </summary>
+        /// <summary><see cref="KeyboardAnimation.GetFrame" /></summary>
         /// <returns>the current animation frame.</returns>
         public override ColorScheme GetFrame() => (int) Time.realtimeSinceStartup % 2 == 0 ? red : blue;
 
-        /// <summary>
-        ///     <see cref="KeyboardAnimation.IsFinished" />
-        /// </summary>
+        /// <summary><see cref="KeyboardAnimation.IsFinished" /></summary>
         /// <returns>true, if the animation is finished, false if not.</returns>
         public override bool IsFinished()
         {
