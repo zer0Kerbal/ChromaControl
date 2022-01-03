@@ -2,9 +2,7 @@
 {
     using UnityEngine;
 
-    /// <summary>
-    ///     Special color scheme for EVA scenes.
-    /// </summary>
+    /// <summary>Special color scheme for EVA scenes.</summary>
     internal class EvaScheme : ColorScheme
     {
         private readonly KeyCode[] movementKeys =
@@ -45,9 +43,7 @@
             GameSettings.EVA_ToggleMovementMode.primary.code
         };
 
-        /// <summary>
-        ///     Overlays the defined keys over a black base layout.
-        /// </summary>
+        /// <summary>Overlays the defined keys over a black base layout.</summary>
         public EvaScheme()
         {
             if (FlightGlobals.ActiveVessel.evaController.JetpackDeployed)
