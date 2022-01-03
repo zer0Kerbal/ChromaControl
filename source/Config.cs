@@ -3,37 +3,25 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    /// <summary>
-    ///     Stores configuration settings for the whole mod. Implemented as singleton.
-    /// </summary>
+    /// <summary>Stores configuration settings for the whole mod. Implemented as singleton.</summary>
     internal class Config
     {
-        /// <summary>
-        ///     Singleton instance
-        /// </summary>
+        /// <summary>Singleton instance</summary>
         private static Config instance;
 
-        /// <summary>
-        ///     Configures the key binding and colors for every action group
-        /// </summary>
+        /// <summary>Configures the key binding and colors for every action group</summary>
         public readonly Dictionary<KSPActionGroup, KeyValuePair<KeyBinding, KeyValuePair<Color, Color>>>
             ActionGroupConf;
 
-        /// <summary>
-        ///     Colors for cyan and blue toggle keys.
-        /// </summary>
+        /// <summary>Colors for cyan and blue toggle keys.</summary>
         public readonly KeyValuePair<Color, Color> CyanBlueToggle =
             new KeyValuePair<Color, Color>(Color.cyan, Color.blue);
 
-        /// <summary>
-        ///     Colors for red and green toggle keys.
-        /// </summary>
+        /// <summary>Colors for red and green toggle keys.</summary>
         public readonly KeyValuePair<Color, Color> RedGreenToggle =
             new KeyValuePair<Color, Color>(Color.red, Color.green);
 
-        /// <summary>
-        ///     Colors for red and orange toggle keys.
-        /// </summary>
+        /// <summary>Colors for red and orange toggle keys.</summary>
         public readonly KeyValuePair<Color, Color> RedOrangeToggle =
             new KeyValuePair<Color, Color>(
                 Color.red,
@@ -45,9 +33,7 @@
                 )
             );
 
-        /// <summary>
-        ///     Private constructor to avoid instantiation outside of our singleton logic.
-        /// </summary>
+        /// <summary>Private constructor to avoid instantiation outside of our singleton logic.</summary>
         private Config()
         {
             this.ActionGroupConf = new Dictionary<KSPActionGroup, KeyValuePair<KeyBinding, KeyValuePair<Color, Color>>>
@@ -171,9 +157,7 @@
             };
         }
 
-        /// <summary>
-        ///     Singleton getter / initializer
-        /// </summary>
+        /// <summary>Singleton getter / initializer</summary>
         public static Config Instance
         {
             get
@@ -187,10 +171,8 @@
             }
         }
 
-        /// <summary>
-        ///     Allows getting a key via it's coordinates, rather than it's keycodes. Necessary for animations to work as expected.
-        ///     Default values are calibrated for razer devices. (Most animations should be ok on other devices too).
-        /// </summary>
+        /// <summary>Allows getting a key via it's coordinates, rather than it's keycodes. Necessary for animations to work as expected.
+        /// Default values are calibrated for razer devices. (Most animations should be ok on other devices too).</summary>
         public KeyCode[,] KeyByPosition { get; set; } =
         {
             {
