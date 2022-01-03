@@ -4,39 +4,25 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Implement this to create an animation on your keyboard.
-    /// </summary>
+    /// <summary>Implement this to create an animation on your keyboard.</summary>
     internal abstract class KeyboardAnimation
     {
-        /// <summary>
-        ///     The fps value for this animation
-        /// </summary>
+        /// <summary>The fps value for this animation</summary>
         private readonly int fps = 24;
 
-        /// <summary>
-        ///     Array of frames we iterate over to show the animation.
-        /// </summary>
+        /// <summary>Array of frames we iterate over to show the animation.</summary>
         private readonly ColorScheme[] frames;
 
-        /// <summary>
-        ///     The list of scenes, this animation can be shown in.
-        /// </summary>
+        /// <summary>The list of scenes, this animation can be shown in.</summary>
         private readonly List<GameScenes> validScenes;
 
-        /// <summary>
-        ///     The index of the currently displayed frame.
-        /// </summary>
+        /// <summary>The index of the currently displayed frame.</summary>
         private int currentFrame;
 
-        /// <summary>
-        ///     The realtime the last frame was displayed
-        /// </summary>
+        /// <summary>The realtime the last frame was displayed</summary>
         private int lastFrameTime;
 
-        /// <summary>
-        ///     Creates a new keyboard animation with the given parameters
-        /// </summary>
+        /// <summary>Creates a new keyboard animation with the given parameters</summary>
         /// <param name="fps">The number of frames per second we want to use.</param>
         /// <param name="validScenes">A list of scenes, the animation should be valid in.</param>
         /// <param name="frames">A list of all frames, containing the actual animation</param>
@@ -48,9 +34,7 @@
             this.frames = frames;
         }
 
-        /// <summary>
-        ///     Returns the current animation frame.
-        /// </summary>
+        /// <summary>Returns the current animation frame.</summary>
         /// <returns>the current animation frame.</returns>
         public virtual ColorScheme GetFrame()
         {
@@ -74,9 +58,7 @@
             return myReturn;
         }
 
-        /// <summary>
-        ///     Checks if the animation is complete.
-        /// </summary>
+        /// <summary>Checks if the animation is complete.</summary>
         /// <returns>true, if the animation is finished.</returns>
         public virtual bool IsFinished() => !this.validScenes.Contains(HighLogic.LoadedScene) ||
                                             this.currentFrame >= this.frames.Length;
