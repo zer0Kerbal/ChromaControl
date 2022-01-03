@@ -4,14 +4,10 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Utility class that contains many useful functions for displaying animations on the keyboard.
-    /// </summary>
+    /// <summary>Utility class that contains many useful functions for displaying animations on the keyboard.</summary>
     internal static class AnimationUtils
     {
-        /// <summary>
-        ///     Interpolates a number of frames for a smooth transition between the provided color schemes.
-        /// </summary>
+        /// <summary>Interpolates a number of frames for a smooth transition between the provided color schemes.</summary>
         /// <param name="from">The color scheme to transition from</param>
         /// <param name="to">The color scheme to transition to</param>
         /// <param name="steps">The number of steps to take</param>
@@ -43,9 +39,7 @@
             return myReturn;
         }
 
-        /// <summary>
-        ///     Calculates the distance of a key from the center of the keyboard.
-        /// </summary>
+        /// <summary>Calculates the distance of a key from the center of the keyboard.</summary>
         /// <param name="x">The x coordinate of the key</param>
         /// <param name="y">The y coordinate of the key</param>
         /// <returns></returns>
@@ -60,9 +54,7 @@
             return distance;
         }
 
-        /// <summary>
-        ///     Colors the keyboard in a circular sine wave from the center with the given offset.
-        /// </summary>
+        /// <summary>Colors the keyboard in a circular sine wave from the center with the given offset.</summary>
         /// <param name="one">The base color</param>
         /// <param name="two">The color for the wave peaks</param>
         /// <param name="offset">The offset used to animate the scene (offset + 1 => next scene)</param>
@@ -95,9 +87,7 @@
             return myReturn;
         }
 
-        /// <summary>
-        ///     Very simple gauss blur over the current color scheme.
-        /// </summary>
+        /// <summary>Very simple gauss blur over the current color scheme.</summary>
         /// <param name="original">the original color scheme</param>
         /// <returns>the gauss-smoothed color scheme</returns>
         public static ColorScheme GaussBlur(ColorScheme original)
@@ -112,10 +102,7 @@
             return ApplyMatrixFilter(original, matrix);
         }
 
-        /// <summary>
-        ///     Allows you to apply any matrix filter to a given color scheme, as long as the matrix is of uneven
-        ///     width and height.
-        /// </summary>
+        /// <summary>Allows you to apply any matrix filter to a given color scheme, as long as the matrix is of uneven width and height.</summary>
         /// <param name="original">the original color scheme</param>
         /// <param name="matrix">the transformation matrix</param>
         /// <returns></returns>
@@ -145,9 +132,7 @@
             return myReturn;
         }
 
-        /// <summary>
-        ///     Calculates the resulting pixel from an original using the supplied transformation matrix.
-        /// </summary>
+        /// <summary>Calculates the resulting pixel from an original using the supplied transformation matrix.</summary>
         /// <param name="original">the original color scheme</param>
         /// <param name="matrix">the transformation matrix</param>
         /// <param name="origX">the pixel x-coordinate</param>
