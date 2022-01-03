@@ -3,19 +3,13 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Manages the keyboard colors for VAB and SPH scenes.
-    /// </summary>
+    /// <summary>Manages the keyboard colors for VAB and SPH scenes.</summary>
     internal class VabSceneManager : ISceneManager
     {
-        /// <summary>
-        ///     The base color scheme, used by all editor scenes
-        /// </summary>
+        /// <summary>The base color scheme, used by all editor scenes</summary>
         private ColorScheme currentColorScheme;
 
-        /// <summary>
-        ///     Returns the rendered color scheme for the current game state.
-        /// </summary>
+        /// <summary>Returns the rendered color scheme for the current game state.</summary>
         /// <returns>The finalized color scheme</returns>
         public ColorScheme GetScheme()
         {
@@ -28,9 +22,7 @@
             return this.currentColorScheme;
         }
 
-        /// <summary>
-        ///     Called during every physics frame of the game. Recalculates the colors
-        ///     according to the editor's state.
+        /// <summary>Called during every physics frame of the game. Recalculates the colorsaccording to the editor's state.
         /// </summary>
         private void Update()
         {
@@ -38,9 +30,7 @@
             this.UpdateToggleables();
         }
 
-        /// <summary>
-        ///     Lights up the corresponding key to the current editor construction mode.
-        /// </summary>
+        /// <summary>Lights up the corresponding key to the current editor construction mode.</summary>
         private void UpdatePlacementState()
         {
             this.currentColorScheme.SetKeysToColor(
@@ -74,9 +64,7 @@
             }
         }
 
-        /// <summary>
-        ///     Lights up all toggleable keys in a color signifying the button's state.
-        /// </summary>
+        /// <summary>Lights up all toggleable keys in a color signifying the button's state.</summary>
         private void UpdateToggleables()
         {
             this.currentColorScheme.SetKeysToColor(
@@ -108,9 +96,7 @@
             }
         }
 
-        /// <summary>
-        ///     Resets the color scheme to the original one.
-        /// </summary>
+        /// <summary>Resets the color scheme to the original one.</summary>
         private void Reset() => this.currentColorScheme = new VabScheme();
     }
 }
