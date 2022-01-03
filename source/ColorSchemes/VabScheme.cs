@@ -2,14 +2,10 @@
 {
     using UnityEngine;
 
-    /// <summary>
-    ///     Contains the base color scheme for all VAB and SPH scenes.
-    /// </summary>
+    /// <summary>Contains the base color scheme for all VAB and SPH scenes.</summary>
     internal class VabScheme : ColorScheme
     {
-        /// <summary>
-        ///     Overlays the defined key colors over the base color scheme.
-        /// </summary>
+        /// <summary>Overlays the defined key colors over the base color scheme.</summary>
         public VabScheme()
         {
             this.SetKeysToColor(
