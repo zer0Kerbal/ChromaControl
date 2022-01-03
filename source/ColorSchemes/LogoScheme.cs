@@ -16,7 +16,8 @@
             KeyCode[] redkeys =
             {
                 // Rocket
-                KeyCode.LeftAlt, KeyCode.Backslash, KeyCode.Z, KeyCode.S, KeyCode.X, KeyCode.C, KeyCode.F3,
+                //KeyCode.LeftAlt, KeyCode.Backslash, KeyCode.Z, KeyCode.S, KeyCode.X, KeyCode.C, KeyCode.F3,
+                KeyCode.LeftAlt, KeyCode.Slash, KeyCode.Z, KeyCode.S, KeyCode.X, KeyCode.C, KeyCode.F3,
                 KeyCode.D, KeyCode.E, KeyCode.Alpha4,
 
                 // Stripes
