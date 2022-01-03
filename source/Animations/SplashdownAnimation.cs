@@ -4,27 +4,19 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Animation displayed when the vessel is splashed down into any sort of ocean.
-    /// </summary>
+    /// <summary>Animation displayed when the vessel is splashed down into any sort of ocean.</summary>
     internal class SplashdownAnimation : KeyboardAnimation
     {
-        /// <summary>
-        ///     The animation frames.
-        /// </summary>
+        /// <summary>The animation frames.</summary>
         private static readonly ColorScheme[] frames;
 
-        /// <summary>
-        ///     List of scenes this animation is valid in.
-        /// </summary>
+        /// <summary>List of scenes this animation is valid in.</summary>
         private static readonly List<GameScenes> validScenes = new List<GameScenes>
         {
             GameScenes.FLIGHT
         };
 
-        /// <summary>
-        ///     Static constructor adds lightning bolts in different colors to both frames
-        /// </summary>
+        /// <summary>Static constructor adds lightning bolts in different colors to both frames</summary>
         static SplashdownAnimation()
         {
             var newFrames = new List<ColorScheme>();
@@ -47,16 +39,12 @@
             frames = newFrames.ToArray();
         }
 
-        /// <summary>
-        ///     Constructor that initializes the keyboard animation object.
-        /// </summary>
+        /// <summary>Constructor that initializes the keyboard animation object.</summary>
         public SplashdownAnimation() : base(40, validScenes, frames)
         {
         }
 
-        /// <summary>
-        ///     Helper method that generates all animation frames.
-        /// </summary>
+        /// <summary>Helper method that generates all animation frames.</summary>
         /// <returns></returns>
         private static ColorScheme[] GenerateAnimationFrames()
         {
