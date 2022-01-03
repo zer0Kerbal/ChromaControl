@@ -2,14 +2,10 @@
 {
     using UnityEngine;
 
-    /// <summary>
-    ///     The base color scheme for all flight related game scenes.
-    /// </summary>
+    /// <summary>The base color scheme for all flight related game scenes.</summary>
     internal class FlightScheme : ColorScheme
     {
-        /// <summary>
-        ///     Overlays the defined keys over a black base layout.
-        /// </summary>
+        /// <summary>Overlays the defined keys over a black base layout.</summary>
         public FlightScheme()
         {
             KeyCode[] yellowkeys =
