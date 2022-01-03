@@ -11,27 +11,20 @@ namespace KspChromaControl
     using KspChromaControl.SceneManagers;
     using UnityEngine;
 
-    /// <summary>
-    ///     The main class, managing the keyboard appearance for every kind of scene KSP
-    ///     uses.
-    /// </summary>
+    /// <summary>The main class, managing the keyboard appearance for every kind of scene KSPuses.</summary>
     [KSPAddon(KSPAddon.Startup.EveryScene, false)]
     public class KspChromaPlugin : MonoBehaviour
     {
         private readonly List<IDataDrain> dataDrains = new List<IDataDrain>();
 
-        /// <summary>
-        ///     The UDP network socket to send keyboard appearance orders to the server.
-        /// </summary>
+        /// <summary>The UDP network socket to send keyboard appearance orders to the server.</summary>
         private readonly ISceneManager flightSceneManager = new FlightSceneManager();
 
         private readonly ISceneManager vabSceneManager = new VabSceneManager();
 
         private ColorScheme lastScheme = null;
 
-        /// <summary>
-        ///     Called by unity during the launch of this addon.
-        /// </summary>
+        /// <summary>Called by unity during the launch of this addon.</summary>
         // ReSharper disable once UnusedMember.Local
         private void Awake()
         {
@@ -76,9 +69,7 @@ namespace KspChromaControl
             }
         }
 
-        /// <summary>
-        ///     Called by unity on every physics frame.
-        /// </summary>
+        /// <summary>Called by unity on every physics frame.</summary>
         // ReSharper disable once UnusedMember.Local
         private void Update()
         {
