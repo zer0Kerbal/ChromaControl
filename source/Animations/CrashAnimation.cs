@@ -5,27 +5,19 @@
     using KspChromaControl.ColorSchemes;
     using UnityEngine;
 
-    /// <summary>
-    ///     Animation displayed when you manage to explode the root part of your vessel.
-    /// </summary>
+    /// <summary>Animation displayed when you manage to explode the root part of your vessel.</summary>
     internal class CrashAnimation : KeyboardAnimation
     {
-        /// <summary>
-        ///     All animation frames for this animation.
-        /// </summary>
+        /// <summary>All animation frames for this animation.</summary>
         private static readonly ColorScheme[] frames;
 
-        /// <summary>
-        ///     List of scenes this animation is valid in.
-        /// </summary>
+        /// <summary>List of scenes this animation is valid in.</summary>
         private static readonly List<GameScenes> validScenes = new List<GameScenes>
         {
             GameScenes.FLIGHT
         };
 
-        /// <summary>
-        ///     Static constructor adds lightning bolts in different colors to both frames
-        /// </summary>
+        /// <summary>Static constructor adds lightning bolts in different colors to both frames</summary>
         static CrashAnimation()
         {
             var newFrames = new List<ColorScheme>();
@@ -54,9 +46,7 @@
             frames = newFrames.ToArray();
         }
 
-        /// <summary>
-        ///     Initializes the base keyboard animation object.
-        /// </summary>
+        /// <summary>Initializes the base keyboard animation object.</summary>
         public CrashAnimation() : base(30, validScenes, frames)
         {
         }
