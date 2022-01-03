@@ -16,7 +16,13 @@
             GameScenes.MAINMENU,
             GameScenes.SPACECENTER,
             GameScenes.TRACKSTATION,
-            GameScenes.CREDITS
+            GameScenes.CREDITS,
+            GameScenes.SETTINGS,
+            GameScenes.LOADINGBUFFER,
+            GameScenes.PSYSTEM,
+            GameScenes.LOADING,
+            GameScenes.MAINMENU,
+            GameScenes.MISSIONBUILDER
         };
 
         /// <summary>Static constructor interpolates from blue to logo.</summary>
