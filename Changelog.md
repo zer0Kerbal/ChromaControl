@@ -9,7 +9,7 @@
 
 ## Version 1.12.0.0-personal - 2021-07-24 [KSP 1.12.2]
 
-- >>-- personal recompile by @zer0Kerbal --<<
+- -- personal recompile by @zer0Kerbal --
 - personal compile for KSP 1.12.1
 - modernize folder structure
 - backend automation
