@@ -1,5 +1,5 @@
 {
-	"NAME"          : "KSP Chroma Control",
+	"NAME"          : "KSP Chroma Control (KCC)",
 	"URL"           : "https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/KSPChromaControl.version",
 	"DOWNLOAD"      : "https://github.com/zer0Kerbal/KSPChromaControl/releases/latest",
 	"CHANGE_LOG_URL": "https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/changelog.md",
@@ -12,7 +12,7 @@
 		"MAJOR": 1,
 		"MINOR": 2,
 		"PATCH": 9,
-		"BUILD": 9
+		"BUILD": 3
 	},
 	"KSP_VERSION": {
 		"MAJOR": 1,
