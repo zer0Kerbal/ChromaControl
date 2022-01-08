@@ -33,8 +33,8 @@ namespace KspChromaControl
     using UnityEngine;
 
     /// <summary>The main class, managing the keyboard appearance for every kind of scene KSPuses.</summary>
-    //[KSPAddon(KSPAddon.Startup.EveryScene, false)]
-    [KSPAddon(KSPAddon.Startup.Instantly, false)]
+    //[KSPAddon(KSPAddon.Startup.Instantly, false)]
+    [KSPAddon(KSPAddon.Startup.EveryScene, false)]
     public class KspChromaPlugin : MonoBehaviour
     {
         private readonly List<IDataDrain> dataDrains = new List<IDataDrain>();
