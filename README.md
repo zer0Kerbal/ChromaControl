@@ -9,11 +9,11 @@ updated: 10 Feb 2023
 
 this file: CC BY-ND 4.0 by zer0Kerbal-->
 
-[![KSP Chroma Control (KCC)][MOD:shd]][forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
+[![KSP Chroma Control (KCC)][SHD:mod]][forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
 [![Curseforge][CURSFG:shd]][CURSFG:url] [![GitHub][GITHUB:shd]][GITHUB:url] [![SpaceDock][SPCDCK:shd]][SPCDCK:url] [![CKAN][ckan:shd]][ckan:url]  
-[![GitHub Pages][PAGES:shd]][pages]
+[![GitHub Pages][SHD:pages]][pages]
 
-![Code][CODE:shd]
+![Code][SHD:code]
 
 
 # KSP Chroma Control (KCC)
@@ -183,9 +183,9 @@ plugin, information
 [pages]: https://zer0kerbal.github.io/KSPChromaControl "GitHub Pages"
 
 <!--- shields -->
-[MOD:shd]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/mod.json
-[CODE:shd]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/code.json
-[PAGES:shd: https://img.shields.io/badge/GitHub-Pages-white?style=plastic&labelColor=9cf&logoColor=181717&logo=github "GitHub IO"
+[SHD:mod]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/mod.json
+[SHD:code]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/code.json
+[SHD:pages: https://img.shields.io/badge/GitHub-Pages-white?style=plastic&labelColor=9cf&logoColor=181717&logo=github "GitHub IO"
 
 <!--- mod provenance -->
 [MOD:0:dnload]: https://www.curseforge.com/kerbal/ksp-mods/kspchromacontrol "CurseForge"
