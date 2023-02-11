@@ -185,7 +185,7 @@ plugin, information
 <!--- shields -->
 [SHD:mod]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/mod.json
 [SHD:code]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/KSPChromaControl/master/json/code.json
-[SHD:pages: https://img.shields.io/badge/GitHub-Pages-white?style=plastic&labelColor=9cf&logoColor=181717&logo=github "GitHub IO"
+[SHD:pages]: https://img.shields.io/badge/GitHub-Pages-white?style=plastic&labelColor=9cf&logoColor=181717&logo=github "GitHub IO"
 
 <!--- mod provenance -->
 [MOD:0:dnload]: https://www.curseforge.com/kerbal/ksp-mods/kspchromacontrol "CurseForge"
