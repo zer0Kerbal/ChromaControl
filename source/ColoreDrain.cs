@@ -255,11 +255,15 @@ namespace KspChromaControl
         {
             var heat = 0.0;
 
-            if (colorScheme.OtherValues.ContainsKey("Heat"))
+            //if (colorScheme.OtherValues.ContainsKey("Heat"))
+            //{
+            //    heat = colorScheme.OtherValues["Heat"];
+            //}
+
+            if (null != colorScheme && null != colorScheme.OtherValues && colorScheme.OtherValues.ContainsKey("Heat"))
             {
                 heat = colorScheme.OtherValues["Heat"];
             }
-
 
             float red, green, blue;
 
