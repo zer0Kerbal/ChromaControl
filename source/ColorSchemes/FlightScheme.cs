@@ -46,8 +46,11 @@ namespace KspChromaControl.ColorSchemes
             };
             this.SetKeysToColor(redkeys, Color.red);
 
-            KeyCode[] bluekeys =
-                {GameSettings.FOCUS_NEXT_VESSEL.primary.code, GameSettings.FOCUS_PREV_VESSEL.primary.code};
+            KeyCode[] bluekeys = {GameSettings.FOCUS_NEXT_VESSEL.primary.code, GameSettings.FOCUS_PREV_VESSEL.primary.code};
+            //{
+            //    GameSettings.FOCUS_NEXT_VESSEL.primary.code,
+            //    GameSettings.FOCUS_PREV_VESSEL.primary.code
+            //};
             this.SetKeysToColor(bluekeys, Color.blue);
         }
     }
